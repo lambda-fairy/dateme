@@ -1,0 +1,83 @@
+html {
+    box-sizing: border-box;
+    background: rgb(183, 128, 255, .25);
+    font: 20px/1.5 'Libre Franklin', serif;
+    color: #111;
+
+    --lavender: rgb(183, 128, 255, .25);
+    --lavender-light: rgb(183, 128, 255, .1);
+    --purple: #9859a8;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem min(2rem, 3vw);
+    background: white;
+}
+
+main :any-link {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--purple);
+    transition: all .1s;
+}
+
+main :any-link:hover, main :any-link:focus, main :any-link:active {
+    background: var(--lavender);
+    border-radius: .5rem;
+    box-shadow: 0 0 0 .5rem var(--lavender);
+    color: var(--black);
+    -webkit-tap-highlight-color: transparent;
+}
+  
+:any-link:focus-visible {
+    outline: .1rem solid var(--purple);
+    outline-offset: .5rem;
+}
+
+main > img {
+    display: block;
+    border-radius: 1rem;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+hr {
+    border: none;
+}
+
+hr::after {
+    content: "🌸 🌸 🌸";
+    display: block;
+    margin: 3rem 0;
+    font-size: 5rem;
+    text-align: center;
+    opacity: .5;
+}
+
+.dateme {
+    display: flex;
+    justify-content: center;
+    margin: 6rem auto;
+}
+
+.dateme :any-link {
+    background: var(--purple);
+    border-radius: 4rem;
+    color: white;
+    padding: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all .3s;
+}
+
+.dateme :any-link:hover, .dateme :any-link:focus, .dateme :any-link:active {
+    background: var(--lavender);
+    color: var(--black);
+    transform: scale(1.1);
+}
